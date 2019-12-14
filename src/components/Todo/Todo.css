@@ -1,0 +1,73 @@
+.todo {
+  width: 60vw;
+  box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.07)
+}
+
+.todo__add-item-field {
+  height: 3em;
+  display: flex;
+  align-items: stretch;
+  margin: 1em;
+}
+
+.todo__add-item-input {
+  flex: 1 1 auto;
+  border: none;
+  font-size: 1.5em;
+}
+
+.todo__add-item-submit {
+  background-color: black;
+  margin: 0;
+  margin-left: 1em;
+  border: none;
+  flex: 0 0 auto;
+  border-radius: 3px;
+  padding: 1em;
+  min-width: 8em;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.todo__add-item-submit::-moz-focus-inner, .todo__item-remove-button::-moz-focus-inner {
+  border: 0;
+}
+
+.todo__add-item-submit:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+.todo__list {
+  margin: 0;
+  padding: 0;
+}
+
+.todo__item {
+  padding: 1em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.todo__item-input {
+  flex: 1 1 auto;
+  border: none;
+  font-size: 1.3em;
+}
+
+.todo__item-remove-button {
+  border: none;
+  background-color: transparent;
+  height: 2em;
+  width: 2em;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  font-weight: bold;
+}
+
+.todo__item-remove-button:hover, .todo__item-remove-button:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+}

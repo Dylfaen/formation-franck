@@ -1,0 +1,13 @@
+.survey {
+
+}
+
+.survey__star-rating {
+  width: 10em;
+}
+
+.survey__form {
+  display: flex;
+
+  flex-direction: column;
+}
