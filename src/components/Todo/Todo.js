@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Search from '../Search';
+
+import {connect} from 'react-redux'
 
 import './Todo.css'
 import Button from '../Button';
 import Form from '../Form';
+import { bindActionCreators } from 'redux';
 
 const Todo = (props) => {
   const INITIAL_VALUE = ""
+
   const [inputValue, setInputValue] = useState(INITIAL_VALUE)
+
 
   const handleSubmit = () => {
     props.onAdd(inputValue)
