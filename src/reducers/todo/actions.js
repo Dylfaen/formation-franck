@@ -1,17 +1,14 @@
 import { fetchMock } from "../../api-mock/api"
 
 
-export const add = (value) => {
-  console.log("pwett add")
-  return { type: "ADD_TODO_ITEM", value }
-}
-
+export const add = (value) => ({ type: "ADD_TODO_ITEM", value })
 
 export const remove = (key) => ({ type: "REMOVE_TODO_ITEM", key })
 
 export const edit = (key, value) => ({ type: "EDIT_TODO_ITEM", key, value })
 
 export const set = (todo) => ({ type: "SET_TODO", todo })
+
 
 export const insertAPI = (value) => {
   return (dispatch) => {
