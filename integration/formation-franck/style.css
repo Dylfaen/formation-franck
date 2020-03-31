@@ -13,7 +13,7 @@
 .card {
   max-width: 14em;
 }
-
+/* 
 .link.colored#toggler-qualite-air {
   background-color: red;
 }
@@ -21,6 +21,10 @@
 
 .link.colored#toggler-confort-thermique {
   background-color: blue;
+} */
+
+.link.active {
+  background-color: #cccc;
 }
 
 
