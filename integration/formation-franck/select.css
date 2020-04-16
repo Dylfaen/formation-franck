@@ -1,0 +1,33 @@
+.borderadapter {
+  width: auto;
+  height: 2em;
+  border: solid 1px #4caf50 ;
+  border-radius: 1em;
+  background-color: #4caf50;
+  -webkit-appearance: none;
+  
+  outline: none;
+  padding-right: 2em;
+  
+}
+
+.borderadapter::-moz-focus-inner {
+  border: 0;
+}
+
+.select {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 2em;
+
+
+}

@@ -460,6 +460,85 @@ $(document).ready(function () {
 
 })
 
+$(document).ready(function () {
+
+  let location = window.location
+
+  console.log("location", location)
+
+  let urls = [
+    {
+      pathToCheck: "/ui/thermique",
+      idToActivate: "#toggler-confort-thermique",
+      type: "page",
+      color: "blue"
+    },
+    {
+      pathToCheck: "/ui/thermique-articles",
+      idToActivate: "#sub-page-button-articles",
+      type: "sub-page",
+      color: "blue"
+    },
+    {
+      pathToCheck: "/ui/thermique-fiche",
+      idToActivate: "#sub-page-button-fiches",
+      type: "sub-page",
+      color: "blue"
+
+    },
+    {
+      pathToCheck: "/ui/thermique-produits",
+      idToActivate: "#sub-page-button-produits",
+      type: "sub-page",
+      color: "blue"
+    },
+    {
+      pathToCheck: "/ui/ventilation",
+      idToActivate: "#toggler-qualite-air",
+      type: "page",
+      color: "green"
+
+    },
+    {
+      pathToCheck: "/ui/ventilation-articles",
+      idToActivate: "#sub-page-button-articles",
+      type: "sub-page",
+      color: "green"
+
+    },
+    {
+      pathToCheck: "/ui/ventilation-fiche",
+      idToActivate: "#sub-page-button-fiches",
+      type: "sub-page",
+      color: "green"
+
+    },
+    {
+      pathToCheck: "/ui/ventilation-produits",
+      idToActivate: "#sub-page-button-produits",
+      type: "sub-page",
+      color: "green"
+    }
+  ];
+
+  urls.forEach(function(url) {
+
+    let property
+    if(url.type === "page") {
+      property = "border-color"
+    } else {
+      property = "background-color"
+    }
+
+    if(location.pathname.includes(url.pathToCheck)) {
+
+      $(url.idToActivate).css(property, url.color)
+    } else {
+      $(url.idToActivate).css(property, "transparent")
+    }
+  })
+
+})
 
 /**
  * Les solutions possibles pour rendre actif un élement du menu quand il est affiché :
